@@ -12,7 +12,8 @@ function clearTimer() {
 }
 
 linkInput.addEventListener("paste", async function(){
-  result.innerHTML = "<small><small>...please wait</small></small>"
+  result.innerHTML = "<br><small><small>...please wait</small></small>"
+  linkInput.setAttribute("disabled","true")
   clearTimer() 
   setTimer()
 })
@@ -27,7 +28,7 @@ linkInput.addEventListener("paste", async function(){
     }
     xmlhttp.onload = function() {
       if (this.status == 200) {
-        if(this.responseText != false) { drawLink(this.responseText) }
+        if(this.responseText != false) { linkInput.removeAttribute("disabled","true"); drawLink(this.responseText) }
       }
     }
     xmlhttp.open("POST", "control/controller.php", true);
