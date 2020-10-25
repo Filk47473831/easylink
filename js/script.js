@@ -5,12 +5,30 @@ var timer;
 var loading;
 
 function setLoadingAnimation() {
-  var chr;
+  var chr1;
+  var chr2;
+  var chr3;
+  var chr4;
+  var chr5;
+  var chr6;
+  var chr7;
   var n;
   loading = setInterval(function(){
-	  n = Math.floor(Math.random() * 26) + 1
-	  if(chr.length < 8) { chr += String.fromCharCode(97 + n) } else { chr = String.fromCharCode(97 + n) }
-	  result.innerHTML = "<h3>" + chr + "</h3>"
+	  chr1 = Math.floor(Math.random() * 26) + 1
+	  chr1 = String.fromCharCode(97 + chr1)
+	  chr2 = Math.floor(Math.random() * 26) + 1
+	  chr2 = String.fromCharCode(97 + chr2)
+	  chr3 = Math.floor(Math.random() * 26) + 1
+	  chr3 = String.fromCharCode(97 + chr3)
+	  chr4 = Math.floor(Math.random() * 26) + 1
+	  chr4 = String.fromCharCode(97 + chr4)
+	  chr5 = Math.floor(Math.random() * 26) + 1
+	  chr5 = String.fromCharCode(97 + chr5)
+	  chr6 = Math.floor(Math.random() * 26) + 1
+	  chr6 = String.fromCharCode(97 + chr6)
+	  chr7 = Math.floor(Math.random() * 26) + 1
+	  chr7 = String.fromCharCode(97 + chr7)
+	  result.innerHTML = "<h3>" + chr1 + chr2 + chr3 + chr4 + chr5 + chr6 + chr7 + "</h3>"
   }, 25)
 }
 
