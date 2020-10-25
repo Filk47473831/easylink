@@ -43,7 +43,7 @@ if(checkForBlock($_SERVER['REMOTE_ADDR'])) { if(substr($_SERVER['REQUEST_URI'],1
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
     <div class="row">
-      <div class="one-full column" style="margin-top: 25%">
+      <div class="one-full column" style="margin-top: 12%">
         <h4>eeZee link</h4>
         <p>Get an easy to read, easy to share link.</p>
         <input autofocus class="u-full-width" type="text" placeholder="paste url here ( must begin with http )" id="linkInput">
