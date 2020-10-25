@@ -12,6 +12,7 @@ function clearTimer() {
 }
 
 linkInput.addEventListener("paste", async function(){
+  result.innerHTML = "...please wait"
   clearTimer() 
   setTimer()
 })
