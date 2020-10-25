@@ -26,7 +26,7 @@ linkInput.addEventListener("paste", async function(){
     }
     xmlhttp.onload = function() {
       if (this.status == 200) {
-        drawLink(this.responseText)
+        if(this.responseText != false) { drawLink(this.responseText) }
       }
     }
     xmlhttp.open("POST", "control/controller.php", true);
