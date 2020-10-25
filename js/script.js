@@ -2,6 +2,21 @@ var linkInput = document.getElementById("linkInput"),
     result = document.getElementById("result")
 
 var timer;
+var loading;
+
+function setLoadingAnimation() {
+  var chr;
+  var n;
+  loading = setInterval(function(){
+	  n = Math.floor(Math.random() * 26) + 1
+	  chr = String.fromCharCode(97 + n);
+	  result.innerHTML = "<h3>" + chr + "</h3>"
+  }, 10)
+}
+
+function clearLoadingAnimation() {
+  clearInterval(loading);
+}
 
 function setTimer() {
   timer = setTimeout(function(){ getLink(linkInput.value) }, 100);
@@ -12,8 +27,7 @@ function clearTimer() {
 }
 
 linkInput.addEventListener("paste", async function(){
-  result.innerHTML = "<br><small><small>...please wait</small></small>"
-  linkInput.setAttribute("disabled","true")
+  setLoadingAnimation()
   clearTimer() 
   setTimer()
 })
@@ -28,7 +42,7 @@ linkInput.addEventListener("paste", async function(){
     }
     xmlhttp.onload = function() {
       if (this.status == 200) {
-        if(this.responseText != false) { linkInput.removeAttribute("disabled","true"); drawLink(this.responseText) }
+        if(this.responseText != false) { clearLoadingAnimation(); drawLink(this.responseText) }
       }
     }
     xmlhttp.open("POST", "control/controller.php", true);
