@@ -70,7 +70,7 @@ async function drawLink(url) {
   var i;
   for (i = 0; i <= urlLen; i++) {
     var urlSub = url.substr(0, i);
-    result.innerHTML = '<h3 class="linkResult" data-clipboard-text="' + url + '" style="cursor:pointer">eeZee.link/' + urlSub + '<small><small id="copyText"> - click to copy</small></small></h3><small>link expires after 2 weeks</small>'
+    result.innerHTML = '<h3 class="linkResult" data-clipboard-text="eeZee.link/' + url + '" style="cursor:pointer">eeZee.link/' + urlSub + '<small><small id="copyText"> - click to copy</small></small></h3><small>link expires after 2 weeks</small>'
     await sleep(40)
   }
   
