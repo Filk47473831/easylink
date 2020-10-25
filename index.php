@@ -1,6 +1,6 @@
 <?php include("../eezeelink_db.php");
 include("../eezeelink.php");
-if(substr($_SERVER['REQUEST_URI'],1) !== "") { followLink(substr($_SERVER['REQUEST_URI'],1)); } ?>
+if(checkForBlock($_SERVER['REMOTE_ADDR'])) { if(substr($_SERVER['REQUEST_URI'],1) !== "") { followLink(substr($_SERVER['REQUEST_URI'],1)); } } ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
