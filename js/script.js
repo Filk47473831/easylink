@@ -9,9 +9,9 @@ function setLoadingAnimation() {
   var n;
   loading = setInterval(function(){
 	  n = Math.floor(Math.random() * 26) + 1
-	  chr = String.fromCharCode(97 + n);
+	  if(chr.length < 8) { chr += String.fromCharCode(97 + n) } else { chr = String.fromCharCode(97 + n) }
 	  result.innerHTML = "<h3>" + chr + "</h3>"
-  }, 10)
+  }, 25)
 }
 
 function clearLoadingAnimation() {
@@ -57,7 +57,7 @@ async function drawLink(url) {
   var i;
   for (i = 0; i <= urlLen; i++) {
     var urlSub = url.substr(0, i);
-    result.innerHTML = '<h3 class="linkResult" data-clipboard-text="' + url + '" style="cursor:pointer">' + urlSub + '<small><small id="copyText"> - click to copy</small></small></h3><small>link expires after 3 days</small>'
+    result.innerHTML = '<h3 class="linkResult" data-clipboard-text="' + url + '" style="cursor:pointer">' + urlSub + '<small><small id="copyText"> - click to copy</small></small></h3><small>link expires after 2 weeks</small>'
     await sleep(40)
   }
   
