@@ -24,11 +24,7 @@ function setLoadingAnimation() {
 	  chr4 = String.fromCharCode(97 + chr4)
 	  chr5 = Math.floor(Math.random() * 26) + 1
 	  chr5 = String.fromCharCode(97 + chr5)
-	  chr6 = Math.floor(Math.random() * 26) + 1
-	  chr6 = String.fromCharCode(97 + chr6)
-	  chr7 = Math.floor(Math.random() * 26) + 1
-	  chr7 = String.fromCharCode(97 + chr7)
-	  result.innerHTML = "<h3>" + chr1 + chr2 + chr3 + chr4 + chr5 + chr6 + chr7 + "</h3>"
+	  result.innerHTML = "<h3>eeZee.link/" + chr1 + chr2 + chr3 + chr4 + chr5 + "</h3>"
   }, 25)
 }
 
