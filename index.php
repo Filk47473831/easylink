@@ -37,7 +37,7 @@ if(checkForBlock($_SERVER['REMOTE_ADDR'])) { if(substr($_SERVER['REQUEST_URI'],1
   <link rel="icon" type="image/png" href="images/favicon.png">
 
 </head>
-<body>
+<body class="unselectable">
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
