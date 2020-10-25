@@ -1,5 +1,0 @@
-RewriteEngine On
-RewriteCond %{REQUEST_URI} !css/
-RewriteCond %{REQUEST_URI} !js/
-RewriteCond %{REQUEST_URI} !control/
-RewriteRule ^(.*)$ index.php
