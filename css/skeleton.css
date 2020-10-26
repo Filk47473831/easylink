@@ -266,8 +266,8 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-  border: 1px solid #33C3F0;
-  outline: 0; }
+ /* border: 1px solid #33C3F0;
+  outline: 0; */ }
 label,
 legend {
   display: block;
@@ -393,10 +393,6 @@ hr {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
-
-textarea:focus, input:focus{
-    outline: none;
 }
 
 /* Clearing
