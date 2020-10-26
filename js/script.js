@@ -33,7 +33,7 @@ function clearLoadingAnimation() {
 }
 
 function setTimer() {
-  timer = setTimeout(function(){ getLink(linkInput.value) }, 800);
+  timer = setTimeout(function(){ getLink(linkInput.value) }, 300);
 }
 
 function clearTimer() {
