@@ -145,7 +145,7 @@ h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
 @media (min-width: 550px) {
   h1 { font-size: 5.0rem; }
   h2 { font-size: 4.2rem; }
-  h3 { font-size: 3.6rem; }
+  h3 { font-size: 3.6rem; font-weight: 600; }
   h4 { font-size: 3.0rem; }
   h5 { font-size: 2.4rem; }
   h6 { font-size: 1.5rem; }
@@ -237,7 +237,7 @@ select {
   height: 38px;
   padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
   background-color: #fff;
-  border: 1px solid #D1D1D1;
+ /* border: 1px solid #D1D1D1; */
   border-radius: 4px;
   box-shadow: none;
   box-sizing: border-box; }
@@ -393,6 +393,10 @@ hr {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+textarea:focus, input:focus{
+    outline: none;
 }
 
 /* Clearing
