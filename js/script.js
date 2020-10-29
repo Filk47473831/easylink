@@ -1,18 +1,17 @@
 var linkInput = document.getElementById("linkInput"),
-    result = document.getElementById("result")
-
-var timer;
-var loading;
+    result = document.getElementById("result"),
+    timer,
+    loading;
 
 function setLoadingAnimation() {
-  var chr1;
-  var chr2;
-  var chr3;
-  var chr4;
-  var chr5;
-  var chr6;
-  var chr7;
-  var n;
+  var chr1,
+      chr2,
+      chr3,
+      chr4,
+      chr5,
+      chr6,
+      chr7,
+      n;
   loading = setInterval(function(){
 	  chr1 = Math.floor(Math.random() * 26) + 1
 	  chr1 = String.fromCharCode(97 + chr1)
@@ -29,7 +28,7 @@ function setLoadingAnimation() {
 }
 
 function clearLoadingAnimation() {
-  clearInterval(loading);
+  clearInterval(loading)
 }
 
 function setTimer() {
@@ -37,7 +36,7 @@ function setTimer() {
 }
 
 function clearTimer() {
-  clearTimeout(timer);
+  clearTimeout(timer)
 }
 
 linkInput.addEventListener("paste", async function(){
@@ -47,7 +46,6 @@ linkInput.addEventListener("paste", async function(){
 })
   
  function getLink(url) {
-   
    if(url.startsWith("http")) {
        if (window.XMLHttpRequest) {
       xmlhttp = new XMLHttpRequest();
@@ -66,14 +64,13 @@ linkInput.addEventListener("paste", async function(){
  }
   
 async function drawLink(url) {
-  var urlLen = url.length
-  var i;
+  var urlLen = url.length,
+      i;
   for (i = 0; i <= urlLen; i++) {
     var urlSub = url.substr(0, i);
     result.innerHTML = '<h3 class="linkResult" data-clipboard-text="eeZee.link/' + url + '" style="cursor:pointer">eeZee.link/' + urlSub + '<small><small id="copyText"> - click to copy</small></small></h3><small>link expires 4 weeks after last use</small>'
     await sleep(40)
-  }
-  
+  } 
   
 }
   
@@ -84,7 +81,6 @@ function sleep(ms) {
 var clipboard = new ClipboardJS('.linkResult');
 
 clipboard.on('success', function(e) {
-	console.log("Link Copied: " + e.text)
 	document.getElementById("copyText").innerText = " - link copied";
 	setTimeout(function() {
 			document.getElementById("copyText").innerText = " - click to copy";
