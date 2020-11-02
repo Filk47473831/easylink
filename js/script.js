@@ -54,7 +54,7 @@ linkInput.addEventListener("paste", async function(){
     }
     xmlhttp.onload = function() {
       if (this.status == 200) {
-        if(this.responseText != false) { clearLoadingAnimation(); drawLink(this.responseText) }
+        if(this.responseText != false) { clearLoadingAnimation(); drawLink(this.responseText) } else { drawLink('error') }
       }
     }
     xmlhttp.open("POST", "control/controller.php", true);
