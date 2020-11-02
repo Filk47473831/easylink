@@ -69,7 +69,8 @@ async function drawLink(url) {
       i;
   for (i = 0; i <= urlLen; i++) {
     var urlSub = url.substr(0, i);
-    result.innerHTML = '<h3 class="linkResult" data-clipboard-text="eeZee.link/' + url + '" style="cursor:pointer">eeZee.link/' + urlSub + '<small><small id="copyText"> - click to copy</small></small></h3><small>link expires 4 weeks after last use</small>'
+    if(url == "error") { result.innerHTML = '<h3 class="linkResult" data-clipboard-text="eeZee.link/' + url + '" style="cursor:pointer">eeZee.link/' + urlSub + '<small><small id="copyText"> - click to copy</small></small></h3><small>link could not be created :(</small>' } else {  
+    result.innerHTML = '<h3 class="linkResult" data-clipboard-text="eeZee.link/' + url + '" style="cursor:pointer">eeZee.link/' + urlSub + '<small><small id="copyText"> - click to copy</small></small></h3><small>link expires 4 weeks after last use</small>' }
     await sleep(40)
   } 
   
