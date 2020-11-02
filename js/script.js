@@ -55,7 +55,7 @@ linkInput.addEventListener("paste", async function(){
     xmlhttp.onload = function() {
       if (this.status == 200) {
         console.log(this.responseText)
-        if(this.responseText != false) { clearLoadingAnimation(); drawLink(this.responseText) } else { drawLink('error') }
+        if(this.responseText != "") { clearLoadingAnimation(); drawLink(this.responseText) } else { drawLink('error') }
       }
     }
     xmlhttp.open("POST", "control/controller.php", true);
