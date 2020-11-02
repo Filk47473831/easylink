@@ -54,14 +54,13 @@ linkInput.addEventListener("paste", async function(){
     }
     xmlhttp.onload = function() {
       if (this.status == 200) {
-        console.log(this.responseText)
         if(this.responseText != "error") { clearLoadingAnimation(); drawLink(this.responseText) } else { clearLoadingAnimation(); drawLink('error') }
       }
     }
     xmlhttp.open("POST", "control/controller.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send("getLink=" + url);
-   }
+   } else { clearLoadingAnimation(); drawLink('error') }
  }
   
 async function drawLink(url) {
