@@ -1,10 +1,9 @@
 var linkInput = document.getElementById("linkInput"),
     result = document.getElementById("result"),
-    body = document.body,
     timer,
     loading;
 
-body.addEventListener("click",function(){
+window.addEventListener("click",function(){
 	linkInput.select()
 })
 
