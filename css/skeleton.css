@@ -397,12 +397,10 @@ hr {
 }
 
 ::-moz-selection { /* Code for Firefox */
-  color: transparent;
   background: transparent;
 }
 
 ::selection {
-  color: transparent;
   background: transparent;
 }
 
