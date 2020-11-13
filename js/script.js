@@ -63,7 +63,7 @@ linkInput.addEventListener("paste", async function(){
     }
     xmlhttp.open("POST", "control/controller.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xmlhttp.send("getLink=" + encodeURIComponent(url));
+    xmlhttp.send("getLink=" + encodeURI(url));
    } else { clearLoadingAnimation(); drawLink('error') }
  }
   
